@@ -1,3 +1,31 @@
+'''
+Bir resmi BGR'dan HSV'ye dönüştürmenin birkaç nedeni vardır:
+
+1. Renk Tabanlı İşleme:
+HSV renk uzayı, renkleri ton, doygunluk ve parlaklık bileşenlerine ayırır. Bu, belirli bir renk 
+aralığındaki nesneleri veya pikselleri tanımlamayı ve segmentlemeyi kolaylaştırır.
+Örneğin, kırmızı bir nesneyi algılamak için, HSV uzayında ton bileşenini kullanarak kırmızı renk 
+aralığındaki pikselleri seçebilirsiniz.
+
+2. Görüntü Geliştirme:
+HSV renk uzayı, renkleri daha ayrıntılı bir şekilde kontrol etmenizi sağlar. Doygunluğu veya 
+parlaklığı ayarlayarak görüntünün renklerini değiştirebilirsiniz.
+Örneğin, bir görüntünün renklerini daha canlı hale getirmek için doygunluğu artırabilirsiniz.
+
+3. Özel Efektler:
+HSV renk uzayı, görüntülere özel efektler uygulamak için kullanılabilir. Örneğin, bir görüntüyü karartmak 
+için parlaklığı azaltabilirsiniz.
+
+4. Nesne Takibi:
+HSV renk uzayı, nesne takibi için kullanılabilir. Nesnenin rengini HSV uzayında temsil ederek ve sonraki 
+karelerde bu rengi arayarak nesneyi takip edebilirsiniz.
+
+BGR'den HSV'ye dönüştürme, aşağıdaki durumlarda faydalı olabilir:
+Renk tabanlı görüntü işleme
+Görüntü geliştirme
+Özel efektler
+Nesne takibi
+'''
 import cv2
 import numpy as np
 
