@@ -1,0 +1,13 @@
+prefix=D:/Anacondaam/envs/firtvirtualworld/Library
+exec_prefix=D:/Anacondaam/envs/firtvirtualworld/Library
+libdir=D:/Anacondaam/envs/firtvirtualworld/Library/lib
+sharedlibdir=D:/Anacondaam/envs/firtvirtualworld/Library/lib
+includedir=D:/Anacondaam/envs/firtvirtualworld/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
