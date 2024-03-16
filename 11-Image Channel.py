@@ -12,17 +12,20 @@ print(f"Shape:{img.shape}")              # height, weight, ımage channel(BGR)
                                     # temsil ediyor.
 
 
-merged = cv2.merge([B, G, R])       # ayırmış olduğum resim kanallarını burada tekrar birleştirdim.
+# merged = cv2.merge([B, G, R])       # ayırmış olduğum resim kanallarını burada tekrar birleştirdim.
+# It makes sense(mantıklı) to use merge after processing, otherwise(aksi taktirde) there is no point(anlamı yok)
 
 
 
-cv2.imshow("Library", img)
+
 cv2.imshow("Library-B", B)            # burada ben blue rengini alıp split(bölme) işlemi yapıyorum.
 cv2.imshow("Library-G", G)            # tabiki burada önemli olan sıra sıra yazmam benim.  
 cv2.imshow("Library-R", R)
-cv2.imshow("Library-merge", merged)              # merge = birleştirmek. bütün o ayırdığım renkleri birleştir-
+cv2.imshow("Library", img)
+#cv2.imshow("Library-merge", merged)              # merge = birleştirmek. bütün o ayırdığım renkleri birleştir-
 # memi sağlıyo burada.
 
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+

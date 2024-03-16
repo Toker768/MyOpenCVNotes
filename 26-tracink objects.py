@@ -1,5 +1,6 @@
-import cv2 
+import cv2  
 import numpy as np 
+
 
 cap = cv2.VideoCapture("1dog.mp4")
 
@@ -10,8 +11,8 @@ while True:
 
     # there is dog in the video, so I find the HSV value of the white.
     sensitivity = 15
-    lower_white = np.array([0,0,168])
-    upper_white = np.array([172,111,255])
+    lower_white = np.array([0,0,255-sensitivity])
+    upper_white = np.array([255,sensitivity,255])
 
     mask = cv2.inRange(hsv,lower_white,upper_white)            # or white or black
     #                  image,min color value, max color value
@@ -21,7 +22,7 @@ while True:
      olarak işaretler.
     '''
 
-    final_State = cv2.bitwise_and(orijinal,orijinal,mask=mask)
+    res = cv2.bitwise_and(orijinal,orijinal,mask=mask)
     '''
     cv2.bitwise_and() fonksiyonunu kullanarak orijinal çerçeve (frame) ve maskesi (mask) ile bitwise AND 
     işlemini uygular. Bu işlem, hem çerçevede hem de maskede beyaz olan pikselleri korur ve beyaz alanları 
@@ -29,25 +30,14 @@ while True:
     kullanmaktan genelde daha verimlidir.
 
     ın fact my purpose in using this is to filter
-    '''
+'''    
 
     cv2.imshow("Frames", orijinal)
     cv2.imshow("With Mask", mask)
-    cv2.imshow("Result", final_State)
+    cv2.imshow("Result", res)
 
     if cv2.waitKey(5) & 0xFF == ord("q"):
         break
 
 cap.release()
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
-
-
-

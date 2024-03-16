@@ -1,9 +1,6 @@
 import cv2
-
-
 '''
-path = "1Fahrettin_pasa.jpg"
-img = cv2.imread(path)    # bu benim görüntümü okumamı yani piksellere ayırmamı sağladı.
+img = cv2.imread("1Fahrettin_pasa.jpg")    # bu benim görüntümü okumamı yani piksellere ayırmamı sağladı.
 # print(img)
 
 # şimdi ben burada bir pikselin değil bir bölgenin renk değerini değiştiricem.seyrett.
@@ -21,10 +18,8 @@ cv2.destroyAllWindows()
 '''
 
 
-
 '''
-path = "1images_opencv.png"
-img = cv2.imread(path)    
+img = cv2.imread("1images_opencv.png")    
 corner = img[0:200,0:200]       
 
 
@@ -41,6 +36,7 @@ cv2.imshow("Corner", corner)
 cv2.waitKey(0)            
 cv2.destroyAllWindows()
 '''
+
 
 
 

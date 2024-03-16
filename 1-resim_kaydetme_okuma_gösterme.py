@@ -2,11 +2,11 @@ import cv2
 import matplotlib
 
 
-'''
+
 img = cv2.imread("1cakma_asker.jpg")     # cv2.imread() fonksiyonu, "cakma_asker.jpg" adlı bir görüntü
                                         # dosyasını okur ve bu görüntüyü bir NumPy dizisine dönüştürür.
 print(img)
-'''
+
 
 
 '''

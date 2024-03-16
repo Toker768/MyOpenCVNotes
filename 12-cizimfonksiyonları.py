@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 
-#canvas = np.zeros((200,200,3), dtype=np.uint8)
-#print(canvas)
+canvas = np.zeros((200,200,3), dtype=np.uint8)
+print(canvas)
 # np.zeros fonksiyonunu kullanarak 512x512 boyutlarında, her bir pikseli 3 renk kanalına sahip (BGR) 
 # bir siyah tuval oluşturur. bu veri tipi seçimide bir standdarttır.
 

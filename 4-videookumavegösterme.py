@@ -7,7 +7,7 @@ import cv2
 # ben ister foto olsun ister video farketmez ben onu en başta bi okuyup değişken içine almam gerekli.benim
 # fotoraflardaki imread() fonsiyonum videoda ise şu:
 
-# cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 # bildiğin videonun içindeki kareleri(frame) leri alıyor ve teker teker içine kaydediyor.oldumu sana video bu 
 # satten sonra kare kare fotoğraflar.
 
@@ -22,19 +22,23 @@ peki lan bu sıfır nerden geldi dediğinizi duyar gibiyim onun da açıklaması
 2: Üçüncü kamerayı kullanır.
 '''
 
-'''
+
 while True:                     # ben karaleri tek tek yakalayıp cap değişkenine hapsettikten sonra onları işliyorum.
     reply, result = cap.read()  # ne yazıkki öyle tek fonksiyonla olmuyor şu aşamada.ben o kareleri(frame)
                                 # tek tek okumam gerekli.
     # burada ayrıca cap.read() iki tane cevap döndürür bunlardan ilki True,False yani okuyup okuyamadığı
-    # ikincisi ise frameler(kare) teker teker döndürür.bunun sırası oldukça önemlidir.
+    # ikincisi ise : okunan karenin Numpy dizisidir. Bu dizi, görüntünün piksellerini ve diğer bilgilerini 
+    # içerir.
 
     if not reply:           # reply'in False olması demek aslında şu anlama geliyor ben eğer dışardan bir 
         break               # video açmışşam onun bitmesi anlamına geliyor.eğer ki webcam'den sen video açmışsan
     # zaten buna gerek kalmaz.
 
     result = cv2.flip(result, 1)  # flip = çevir burada ben yazmış olduğum 1'den dolayı y eksenine göre  
-    # çeviriyorum webcamden aldığım görüntüyü.         
+    # çeviriyorum webcamden aldığım görüntüyü.
+#     1: Görüntüyü yatay olarak çevirir.
+#     0: Görüntüyü dikey olarak çevirir.
+#    -1: Görüntüyü hem yatay hem de dikey olarak çevirir.      
 
     cv2.imshow("Webcam", result)           # burada her kareyi bana gösterecek bir döngünü içinde.bide ben bunları
     # göriyim bağlım.
@@ -51,7 +55,7 @@ while True:                     # ben karaleri tek tek yakalayıp cap değişken
 
 
 cap.release()            # release = serbest bırakmak,tahliye etmek
-'''
+
 
 
 '''

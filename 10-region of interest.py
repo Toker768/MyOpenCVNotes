@@ -3,7 +3,7 @@
 olay şu ben bir fotoğrafdaki insanların duygu hallerine bakıcaksam benim ilgi alanım(region of interest)
 yüzleri olur.
 
-Mesela ben bir basketbol topunun boyunu hesaplamak istiyorum o halde benim region if interest'im basketbol 
+Mesela ben bir basketbol topunun boyunu hesaplamak istiyorum o halde benim region of interest'im basketbol 
 topu olur.
 '''
 

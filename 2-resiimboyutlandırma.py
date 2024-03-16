@@ -26,13 +26,12 @@ ve sonuçları gözlemlemek mümkün olabilir. Bu, algoritmanın performansını
 değerlendirmek için kullanışlıdır.
 '''
 
-
 # cv2.namedWindow("Myimage")
 
 img = cv2.imread("1cakma_asker.jpg")            # ben bir resmi önce numpy dizilerini dönüştürmem gerek.numpy'a
 # dönüştürdükten sonra işlemler yapabilirim anca.
 
-img = cv2.resize(img, (400,400))
+img = cv2.resize(img, (400,400), interpolation=cv2.INTER_LINEAR)
 
 cv2.imshow("Myimage", img)               # görüntümün başılğını ve hangi görüntümü göstereceğimi belli ettim.
 cv2.waitKey(0)

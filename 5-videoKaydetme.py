@@ -40,7 +40,7 @@ H.264/AVC, H.265/HEVC, VP9, AV1 bunlar yaygın olarak kullanılmakda özelikkle 
 
 
 3. Framerate: Videodaki saniyedeki kare sayısını (FPS) belirler. Daha yüksek bir framerate, daha akıcı
-bir video anlamına gelir.
+bir video anlamına gelir. .waitkey() ile neredeyse birbirinin zıttı olduğunu söyleyebilirim.
 
 
 4. Çözünürlük: Videonun genişliğini ve yüksekliğini piksel cinsinden belirler. Daha yüksek bir çözünürlük,

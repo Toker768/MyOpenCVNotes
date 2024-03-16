@@ -2,13 +2,10 @@
 
 import cv2 
 
-'''
-path = "1turgut_ozal.jpg"        # aynı yerde olduğu için konumu böyle belirtmem
-# yeterli olucaktır benim için.
-
+path = "1turgut_ozal.jpg"    # aynı yerde olduğu için konumu böyle belirtmem yeterli olucaktır benim için
 img = cv2.imread(path)
 # print(img)
-'''
+
 
 # benim normalde bildiğim kordinat sistemleri ortadan başlar ama resimlerde böyle değil.sol üsten başlıyor.
 # sağa doğru gidildikçe x değerim artarken aşağı yöne gittiğim zaman y değerim artmakda.böyle bir farkı var.
@@ -18,8 +15,16 @@ ben atıyorum 10'a 10 değerini bulurken bana vermiş olduğu değerin anlami o 
 
 '''
 px = img[10,10]
-print(px)           # [78 78 78] değeri bu pikselin BGR değerlerini temsil ediyor.çünkü open cv bu şekilde çalışır.  
+print(px)        # [78 78 78] değeri bu pikselin BGR değerlerini temsil ediyor.çünkü open cv bu şekilde çalışır.  
+# The reason I use square brackets(köşeli parantez) is because of the Numpy array.
+# numpy array uses like this
 '''
+'''
+# let's we learn what is the size
+print(img.shape)   # will give row,column,channel colors
+'''
+
+
 
 
 '''
@@ -35,11 +40,19 @@ print(piksel_sayisi)                                      # olarak sayilmakda.
 
 '''
 img = cv2.imread("1turgut_ozal.jpg")
-print(img[100,100])  # [119 124 127] bu çıktının anlamı ise şöyle : 
+print(img[100,100])  # [119 124 127] bu çıktının anlamı ise şöyle: 
 # 119: Mavi (B) bileşeni
 # 124: Yeşil (G) bileşeni
 # 127: Kırmızı (R) bileşeni
 
+# their average give me Brightness(parlaklık) of pixel
+
+# give me saturation(doygunluk):  If the difference between color components(bileşenler) is low, the saturation of the 
+# pixel is also low.If saturation is high, colors appear vibrant(canlı) and bright(parlak); 
+# if saturation is low,colors appear pale(soluk) and dull(mat).
+
+# and fınally gives pixel tone(colors). 
+ 
 
 # ben şöyle yaparsamda 100'e 100 noktasında olan bunun 0.indexde olanı yani Blue(mavi) yi bana gösterecektir.
 blue =(img[100,100,0])
@@ -63,6 +76,7 @@ img.itemset((10,10,2), 199)             # ben burada 10,10 noktasında olan piks
 '''
 
 
+
 '''
 OpenCV'nin bir pikselin rengini BGR şeklinde yapmasının birkaç sebebi var:
 
@@ -76,6 +90,8 @@ Uyumluluk:
 OpenCV, BGR'yi kullanan birçok üçüncü taraf kütüphanesiyle uyumludur.
 Bununla birlikte, RGB renk uzayı daha yaygın olarak kullanılır.
 '''
+
+
 
 
 
